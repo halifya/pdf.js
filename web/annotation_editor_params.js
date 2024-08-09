@@ -88,6 +88,8 @@ class AnnotationEditorParams {
 
     this.eventBus._on("annotationeditorparamschanged", evt => {
       for (const [type, value] of evt.details) {
+        console.log(`type : ${type}`)
+        console.log(`color value : ${value}`)
         switch (type) {
           case AnnotationEditorParamsType.FREETEXT_SIZE:
             editorFreeTextFontSize.value = value;

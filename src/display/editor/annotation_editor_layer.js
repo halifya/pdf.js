@@ -639,6 +639,7 @@ class AnnotationEditorLayer {
     this.#uiManager.updateMode(mode);
 
     const { offsetX, offsetY } = this.#getCenterPoint();
+    
     const id = this.getNextId();
     const editor = this.#createNewEditor({
       parent: this,
@@ -675,6 +676,7 @@ class AnnotationEditorLayer {
    * @returns {AnnotationEditor}
    */
   createAndAddNewEditor(event, isCentered, data = {}) {
+    console.log('[ADD] Annotation :', { x: event.offsetX / 1.7, y: event.offsetY / 1.7 });
     const id = this.getNextId();
     const editor = this.#createNewEditor({
       parent: this,
@@ -704,7 +706,6 @@ class AnnotationEditorLayer {
       this.viewport.rotation % 180 === 0
         ? [centerX, centerY]
         : [centerY, centerX];
-
     return { offsetX, offsetY };
   }
 
