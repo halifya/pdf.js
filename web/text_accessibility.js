@@ -46,7 +46,9 @@ class TextAccessibilityManager {
   static #compareElementPositions(e1, e2) {
     const rect1 = e1.getBoundingClientRect();
     const rect2 = e2.getBoundingClientRect();
-
+    console.log(`----------------------`);
+    console.log(`1(x,y) : ${rect1.x / 2},${rect1.y / 1.9}`);
+    console.log(`2(x,y) : ${rect2.x / 2},${rect2.y / 1.9}`);
     if (rect1.width === 0 && rect1.height === 0) {
       return +1;
     }
@@ -73,7 +75,7 @@ class TextAccessibilityManager {
 
     const centerX1 = rect1.x + rect1.width / 2;
     const centerX2 = rect2.x + rect2.width / 2;
-
+    
     return centerX1 - centerX2;
   }
 

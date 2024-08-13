@@ -677,6 +677,7 @@ class AnnotationEditorLayer {
    */
   createAndAddNewEditor(event, isCentered, data = {}) {
     console.log('[ADD] Annotation :', { x: event.offsetX / 1.7, y: event.offsetY / 1.7 });
+    console.log('Defualt value :', { x: event.offsetX , y: event.offsetY });
     const id = this.getNextId();
     const editor = this.#createNewEditor({
       parent: this,
