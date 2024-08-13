@@ -76,6 +76,8 @@ class EventBus {
    * @param {Object} [options]
    */
   on(eventName, listener, options = null) {
+    console.log("Evenbus eventName", eventName )
+    console.log("Evenbus listener", listener )
     this._on(eventName, listener, {
       external: true,
       once: options?.once,

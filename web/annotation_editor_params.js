@@ -88,6 +88,7 @@ class AnnotationEditorParams {
 
     this.eventBus._on("annotationeditorparamschanged", evt => {
       for (const [type, value] of evt.details) {
+        console.log(`----- annotationeditorparamschanged`)
         console.log(`type : ${type}`)
         console.log(`color value : ${value}`)
         switch (type) {

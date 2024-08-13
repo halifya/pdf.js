@@ -1630,7 +1630,9 @@ class AnnotationEditorUIManager {
     if (!this.#editorTypes) {
       return;
     }
-
+    console.log(`Update param annotations`)
+    console.log(`type annotations : ${type}`)
+    console.log(`value : ${value}`)
     switch (type) {
       case AnnotationEditorParamsType.CREATE:
         this.currentLayer.addNewEditor();
