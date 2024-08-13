@@ -337,9 +337,12 @@ class AnnotationFactory {
       if (annotation.deleted) {
         continue;
       }
+      console.log(`==== Anotation type`)
       switch (annotation.annotationType) {
+        
         case AnnotationEditorType.FREETEXT:
           if (!baseFontRef) {
+            console.log("xref", xref)
             const baseFont = new Dict(xref);
             baseFont.set("BaseFont", Name.get("Helvetica"));
             baseFont.set("Type", Name.get("Font"));
